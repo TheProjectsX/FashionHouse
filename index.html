@@ -5,23 +5,36 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fashion House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <nav>
-        <h1>
-          <img src="assets/icons/logo.png" alt="Logo" />
+        <h1 class="page-title">
+          <img src="assets/icons/logo.svg" alt="Logo" />
           <span>Fashion</span>
           House
         </h1>
 
-        <ul class="nav-links">
-          <li>Home</li>
-          <li>Product</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-        </ul>
+        <label for="ham-nav-open" class="ham-nav-opener">
+          <img src="assets/icons/menu.svg" alt="Menu Icon" />
+        </label>
+        <input type="checkbox" id="ham-nav-open" hidden />
+
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Product</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
       </nav>
 
       <div class="header-section">
@@ -188,7 +201,9 @@
       </section>
     </main>
     <footer>
-      <p class="copyright">Copyright &copy; TheProjectsX</p>
+      <p class="copyright">
+        Copyright &copy; TheProjectsX. All Rights Reserved
+      </p>
     </footer>
   </body>
 </html>
