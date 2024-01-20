@@ -5,10 +5,390 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fashion House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="shortcut icon"
+      href="../assets/icons/logo.svg"
+      type="image/x-icon"
+    />
   </head>
-  <body>
-    <header></header>
-    <main></main>
-    <footer></footer>
+  <style>
+    :root {
+      --color-primary: #a4bc46;
+      --color-secondary: #fabe4c;
+    }
+
+    .max-screen-width {
+      max-width: 1100px;
+      margin-inline: auto;
+    }
+
+    .font-primary {
+      font-family: "Roboto", sans-serif;
+    }
+
+    .font-secondary {
+      font-family: "Montserrat", sans-serif;
+    }
+
+    .font-tertiary {
+      font-family: "Bebas Neue", sans-serif;
+    }
+
+    .desc-color {
+      color: #3e3e3e;
+    }
+  </style>
+  <body class="font-primary">
+    <header class="bg-[#FFFBF0] px-8 py-6 mb-16">
+      <nav
+        class="grid items-center justify-between max-screen-width mb-12 grid-cols-2 md:flex"
+      >
+        <h1 class="page-title flex items-center gap-2.5 text-2xl font-bold">
+          <img src="../assets/icons/logo.svg" alt="Logo" />
+          <span class="text-[var(--color-primary)]">Fashion</span>
+          House
+        </h1>
+
+        <label
+          for="ham-nav-open"
+          class="ham-nav-opener cursor-pointer flex justify-end md:hidden"
+        >
+          <img src="../assets/icons/menu.svg" alt="Menu Icon" />
+        </label>
+        <input type="checkbox" id="ham-nav-open" class="peer" hidden />
+
+        <div
+          class="nav-links-container col-span-2 grid grid-rows-[0fr] transition-[grid-template-rows] peer-checked:grid-rows-[1fr] md:block md:col-auto"
+        >
+          <ul
+            class="nav-links flex items-center flex-col gap-1.5 text-lg font-semibold overflow-hidden md:flex-row"
+          >
+            <li><a href="#" class="p-2.5">Home</a></li>
+            <li><a href="#" class="p-2.5">Product</a></li>
+            <li><a href="#" class="p-2.5">About Us</a></li>
+            <li><a href="#" class="p-2.5">Contact Us</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div
+        class="header-section flex flex-col md:flex-row gap-10 justify-between items-center max-screen-width"
+      >
+        <div class="section-text-container md:w-[48%]">
+          <h3
+            class="header-title text-[2.5rem] sm:text-7xl font-tertiary max-w-md"
+          >
+            <span class="text-[var(--color-secondary)]">Be the penguins</span>
+            <br />
+            of winter
+          </h3>
+          <p class="section-desc max-w-md mt-1.5 mb-4 desc-color">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+          <button
+            class="btn-primary flex items-center gap-2.5 px-4 py-3 rounded-xl border-none outline-none cursor-pointer bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white text-lg"
+          >
+            <img
+              src="../assets/icons/shopping-cart.png"
+              alt="Icon"
+              class="w-5"
+            />
+            Buy Now
+          </button>
+        </div>
+        <div class="section-image-container md:w-[48%]">
+          <img
+            src="../assets/images/model.png"
+            alt="Model Image"
+            class="w-full"
+          />
+        </div>
+      </div>
+    </header>
+    <!-- Main Section -->
+    <main class="max-screen-width px-8">
+      <!-- Jacket Examples -->
+      <section class="jacket-example mb-16">
+        <!-- div.jacket-item*3>img[src="../assets/images/jacket-$.png" alt="Jacket Preview"]+h4.item-title+p.item-desc{Lorem Ipsum is simply dummy text of the printing and typesetting industry.}+div.item-details>h5.item-price{\$234}+button.btn-primary>img[src="../assets/icons/shopping-cart.png" alt="Icon"]+{ Buy Now} -->
+        <div class="women-jackets mb-12">
+          <h3
+            class="section-title font-tertiary text-center md:text-left mb-5 text-4xl"
+          >
+            Women Jacket
+          </h3>
+          <div class="jackets-container flex justify-around gap-5 flex-wrap">
+            <div class="jacket-item max-w-80 p-4 rounded-2xl shadow-lg">
+              <img
+                src="../assets/images/jacket-1.png"
+                alt="Jacket Preview"
+                class="w-full rounded-2xl p-8 bg-[#F1F1F1]"
+              />
+              <h4 class="item-title text-xl font-bold my-2.5 text-[#363958]">
+                Yellow Coat Jacket
+              </h4>
+              <p class="item-desc mb-3.5 desc-color">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+              <div class="item-details flex items-center justify-between">
+                <h5
+                  class="item-price text-[var(--color-secondary)] text-3xl font-black"
+                >
+                  $234
+                </h5>
+                <button
+                  class="btn-primary flex items-center gap-2.5 px-4 py-3 rounded-xl border-none outline-none cursor-pointer bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white text-lg"
+                >
+                  <img
+                    src="../assets/icons/shopping-cart.png"
+                    alt="Icon"
+                    class="w-5"
+                  />
+                  Buy Now
+                </button>
+              </div>
+            </div>
+            <div class="jacket-item max-w-80 p-4 rounded-2xl shadow-lg">
+              <img
+                src="../assets/images/jacket-2.png"
+                alt="Jacket Preview"
+                class="w-full rounded-2xl p-8 bg-[#F1F1F1]"
+              />
+              <h4 class="item-title text-xl font-bold my-2.5 text-[#363958]">
+                Ladies Jacket
+              </h4>
+              <p class="item-desc mb-3.5 desc-color">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+              <div class="item-details flex items-center justify-between">
+                <h5
+                  class="item-price text-[var(--color-secondary)] text-3xl font-black"
+                >
+                  $234
+                </h5>
+                <button
+                  class="btn-primary flex items-center gap-2.5 px-4 py-3 rounded-xl border-none outline-none cursor-pointer bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white text-lg"
+                >
+                  <img
+                    src="../assets/icons/shopping-cart.png"
+                    alt="Icon"
+                    class="w-5"
+                  />
+                  Buy Now
+                </button>
+              </div>
+            </div>
+            <div class="jacket-item max-w-80 p-4 rounded-2xl shadow-lg">
+              <img
+                src="../assets/images/jacket-3.png"
+                alt="Jacket Preview"
+                class="w-full rounded-2xl p-8 bg-[#F1F1F1]"
+              />
+              <h4 class="item-title text-xl font-bold my-2.5 text-[#363958]">
+                Woman Leather Jacket
+              </h4>
+              <p class="item-desc mb-3.5 desc-color">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+              <div class="item-details flex items-center justify-between">
+                <h5
+                  class="item-price text-[var(--color-secondary)] text-3xl font-black"
+                >
+                  $234
+                </h5>
+                <button
+                  class="btn-primary flex items-center gap-2.5 px-4 py-3 rounded-xl border-none outline-none cursor-pointer bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white text-lg"
+                >
+                  <img
+                    src="../assets/icons/shopping-cart.png"
+                    alt="Icon"
+                    class="w-5"
+                  />
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="men-jackets">
+          <h3
+            class="section-title font-tertiary text-center md:text-left mb-5 text-4xl"
+          >
+            Men Jacket
+          </h3>
+          <div class="jackets-container flex justify-around gap-5 flex-wrap">
+            <div class="jacket-item max-w-80 p-4 rounded-2xl shadow-lg">
+              <img
+                src="../assets/images/jacket-3.png"
+                alt="Jacket Preview"
+                class="w-full rounded-2xl p-8 bg-[#F1F1F1]"
+              />
+              <h4 class="item-title text-xl font-bold my-2.5 text-[#363958]">
+                Snowboard Jacket Mens
+              </h4>
+              <p class="item-desc mb-3.5 desc-color">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+              <div class="item-details flex items-center justify-between">
+                <h5
+                  class="item-price text-[var(--color-secondary)] text-3xl font-black"
+                >
+                  $234
+                </h5>
+                <button
+                  class="btn-primary flex items-center gap-2.5 px-4 py-3 rounded-xl border-none outline-none cursor-pointer bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white text-lg"
+                >
+                  <img
+                    src="../assets/icons/shopping-cart.png"
+                    alt="Icon"
+                    class="w-5"
+                  />
+                  Buy Now
+                </button>
+              </div>
+            </div>
+            <div class="jacket-item max-w-80 p-4 rounded-2xl shadow-lg">
+              <img
+                src="../assets/images/jacket-4.png"
+                alt="Jacket Preview"
+                class="w-full rounded-2xl p-8 bg-[#F1F1F1]"
+              />
+              <h4 class="item-title text-xl font-bold my-2.5 text-[#363958]">
+                Man Leather Jacket
+              </h4>
+              <p class="item-desc mb-3.5 desc-color">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+              <div class="item-details flex items-center justify-between">
+                <h5
+                  class="item-price text-[var(--color-secondary)] text-3xl font-black"
+                >
+                  $234
+                </h5>
+                <button
+                  class="btn-primary flex items-center gap-2.5 px-4 py-3 rounded-xl border-none outline-none cursor-pointer bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white text-lg"
+                >
+                  <img
+                    src="../assets/icons/shopping-cart.png"
+                    alt="Icon"
+                    class="w-5"
+                  />
+                  Buy Now
+                </button>
+              </div>
+            </div>
+            <div class="jacket-item max-w-80 p-4 rounded-2xl shadow-lg">
+              <img
+                src="../assets/images/jacket-5.png"
+                alt="Jacket Preview"
+                class="w-full rounded-2xl p-8 bg-[#F1F1F1]"
+              />
+              <h4 class="item-title text-xl font-bold my-2.5 text-[#363958]">
+                Man Casual Jackets
+              </h4>
+              <p class="item-desc mb-3.5 desc-color">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry.
+              </p>
+              <div class="item-details flex items-center justify-between">
+                <h5
+                  class="item-price text-[var(--color-secondary)] text-3xl font-black"
+                >
+                  $234
+                </h5>
+                <button
+                  class="btn-primary flex items-center gap-2.5 px-4 py-3 rounded-xl border-none outline-none cursor-pointer bg-gradient-to-r from-[#A4BC46] to-[#85A019] text-white text-lg"
+                >
+                  <img
+                    src="../assets/icons/shopping-cart.png"
+                    alt="Icon"
+                    class="w-5"
+                  />
+                  Buy Now
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="about-shop flex flex-col md:flex-row justify-between items-center gap-10 mb-16"
+      >
+        <div class="section-text-container w-fit space-y-5">
+          <div
+            class="about-item flex items-center gap-4 px-5 py-6 rounded-xl shadow-lg md:min-w-[340px]"
+          >
+            <img src="../assets/icons/house.png" alt="Icon" class="w-[70px]" />
+            <div class="item-details">
+              <h4 class="item-title text-xl font-bold my-2.5 text-[#363958]">
+                Find the Perfect Fit
+              </h4>
+              <p class="item-desc desc-color">
+                Everybody is different, which is why we offer styles for every
+                body.
+              </p>
+            </div>
+          </div>
+          <div
+            class="about-item flex items-center gap-4 px-5 py-6 rounded-xl shadow-lg md:min-w-[340px]"
+          >
+            <img src="../assets/icons/box.png" alt="Icon" class="w-[70px]" />
+            <div class="item-details">
+              <h4 class="item-title text-xl font-bold my-2.5 text-[#363958]">
+                Free Exchanges
+              </h4>
+              <p class="item-desc desc-color">
+                One of the many reasons you can shop with peace of mind.
+              </p>
+            </div>
+          </div>
+          <div
+            class="about-item flex items-center gap-4 px-5 py-6 rounded-xl shadow-lg md:min-w-[340px]"
+          >
+            <img
+              src="../assets/icons/question.png"
+              alt="Icon"
+              class="w-[70px]"
+            />
+            <div class="item-details">
+              <h4 class="item-title text-xl font-bold my-2.5 text-[#363958]">
+                Contact Our Seller
+              </h4>
+              <p class="item-desc desc-color">
+                They are here to help you. That's quite literally what we pay
+                them for.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="section-image-container md:w-3/5">
+          <img
+            src="../assets/images/shopping.png"
+            alt="Shopping Image"
+            class="w-full"
+          />
+        </div>
+      </section>
+    </main>
+    <footer
+      class="bg-[var(--color-secondary)] p-5 text-xs text-center font-semibold desc-color"
+    >
+      <p class="copyright">
+        Copyright &copy; TheProjectsX. All Rights Reserved
+      </p>
+    </footer>
   </body>
 </html>
