@@ -225,6 +225,7 @@ nav {
 .about-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 15px;
     padding: 25px 20px;
     border-radius: 10px;
